@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:padding="@dimen/spacing_xl">
+
+    <TextView
+        android:id="@+id/tvMissionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_typing_mission"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/text_size_title"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/spacing_massive" />
+
+    <TextView
+        android:id="@+id/tvTargetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/typing_target_sample"
+        android:textColor="@color/color_success"
+        android:textSize="@dimen/text_size_subtitle"
+        android:textStyle="italic"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/spacing_xxl"
+        app:layout_constraintTop_toBottomOf="@id/tvMissionTitle" />
+
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructions_typing"
+        android:textColor="@color/color_text_secondary"
+        android:textSize="@dimen/text_size_body_small"
+        android:layout_marginTop="@dimen/spacing_xs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTargetText" />
+
+    <EditText
+        android:id="@+id/etTypingInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_type_here"
+        android:textColor="@color/color_text_primary"
+        android:textColorHint="@color/color_text_disabled"
+        android:layout_marginTop="@dimen/spacing_xxl"
+        android:backgroundTint="@color/color_text_primary"
+        app:layout_constraintTop_toBottomOf="@id/tvInstructions" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitTyping"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_lg"
+        android:text="@string/action_done"
+        android:backgroundTint="@color/color_primary"
+        android:layout_marginTop="@dimen/spacing_xxl"
+        app:layout_constraintTop_toBottomOf="@id/etTypingInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

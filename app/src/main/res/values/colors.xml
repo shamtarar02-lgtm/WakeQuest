@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Brand -->
+    <color name="color_primary">#6C63FF</color>
+    <color name="color_primary_variant">#5548E8</color>
+
+    <!-- Backgrounds -->
+    <color name="color_background">#121212</color>
+    <color name="color_surface">#1E1E1E</color>
+    <color name="color_surface_variant">#333333</color>
+
+    <!-- Text -->
+    <color name="color_text_primary">#FFFFFF</color>
+    <color name="color_text_secondary">#BBBBBB</color>
+    <color name="color_text_tertiary">#999999</color>
+    <color name="color_text_disabled">#888888</color>
+
+    <!-- Dividers / strokes -->
+    <color name="color_divider">#333333</color>
+
+    <!-- Ripples -->
+    <color name="color_ripple_light">#555555</color>
+    <color name="color_ripple_white_40">#40FFFFFF</color>
+
+    <!-- Feedback / mission accents -->
+    <color name="color_success">#4CAF50</color>
+    <color name="color_warning">#FFB74D</color>
+    <color name="color_error">#E53935</color>
+
+    <!-- Simon Says mission tiles -->
+    <color name="color_simon_red">#88FF0000</color>
+    <color name="color_simon_blue">#880000FF</color>
+    <color name="color_simon_green">#8800FF00</color>
+    <color name="color_simon_yellow">#88FFFF00</color>
+
+    <!-- QR scanner -->
+    <color name="color_scanner_background">#000000</color>
+    <color name="color_scanner_scrim">#90000000</color>
+    <color name="color_scanner_card_overlay">#CC000000</color>
+    <color name="color_scan_line">#00FF00</color>
+
+</resources>

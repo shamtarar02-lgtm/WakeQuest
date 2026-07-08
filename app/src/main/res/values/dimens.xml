@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Spacing scale -->
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_sm">12dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">20dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_xxl">32dp</dimen>
+    <dimen name="spacing_huge">48dp</dimen>
+    <dimen name="spacing_massive">64dp</dimen>
+    <dimen name="spacing_giant">100dp</dimen>
+
+    <!-- Component sizing -->
+    <dimen name="icon_size_sm">24dp</dimen>
+    <dimen name="icon_size_md">48dp</dimen>
+    <dimen name="icon_size_lg">120dp</dimen>
+    <dimen name="button_height_lg">60dp</dimen>
+    <dimen name="list_bottom_padding">140dp</dimen>
+    <dimen name="simon_tile_size">120dp</dimen>
+
+    <!-- QR scanner -->
+    <dimen name="qr_frame_size">260dp</dimen>
+    <dimen name="qr_scan_line_width">230dp</dimen>
+    <dimen name="qr_scan_line_height">3dp</dimen>
+    <dimen name="qr_card_corner_radius">25dp</dimen>
+
+    <!-- Card / surface -->
+    <dimen name="card_corner_radius">16dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_fab">6dp</dimen>
+    <dimen name="elevation_fab_pressed">12dp</dimen>
+    <dimen name="elevation_card">8dp</dimen>
+    <dimen name="elevation_scan_line">4dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_caption_alt">13sp</dimen>
+    <dimen name="text_size_body_small">14sp</dimen>
+    <dimen name="text_size_body">16sp</dimen>
+    <dimen name="text_size_body_large">18sp</dimen>
+    <dimen name="text_size_subtitle">20sp</dimen>
+    <dimen name="text_size_title">28sp</dimen>
+    <dimen name="text_size_headline">32sp</dimen>
+    <dimen name="text_size_display">48sp</dimen>
+    <dimen name="text_size_display_lg">64sp</dimen>
+    <dimen name="text_size_emoji">80sp</dimen>
+
+</resources>

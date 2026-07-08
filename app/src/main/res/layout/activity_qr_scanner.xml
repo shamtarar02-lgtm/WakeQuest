@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_scanner_background">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Dim Overlays for Focus -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_scanner_scrim"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/overlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/color_scanner_scrim"
+        app:layout_constraintTop_toBottomOf="@+id/overlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/qr_frame_size"
+        android:background="@color/color_scanner_scrim"
+        app:layout_constraintTop_toTopOf="@+id/overlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/overlay" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/qr_frame_size"
+        android:background="@color/color_scanner_scrim"
+        app:layout_constraintTop_toTopOf="@+id/overlay"
+        app:layout_constraintStart_toEndOf="@+id/overlay"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scan Frame -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="@dimen/qr_frame_size"
+        android:layout_height="@dimen/qr_frame_size"
+        android:background="@drawable/qr_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Animated Scan Line -->
+    <View
+        android:id="@+id/scanLine"
+        android:layout_width="@dimen/qr_scan_line_width"
+        android:layout_height="@dimen/qr_scan_line_height"
+        android:background="@color/color_scan_line"
+        android:elevation="@dimen/elevation_scan_line"
+        app:layout_constraintEnd_toEndOf="@+id/overlay"
+        app:layout_constraintStart_toStartOf="@+id/overlay"
+        app:layout_constraintTop_toTopOf="@+id/overlay"
+        android:layout_marginTop="@dimen/spacing_lg" />
+
+    <!-- Mission Status Header -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_giant"
+        app:cardBackgroundColor="@color/color_scanner_card_overlay"
+        app:cardCornerRadius="@dimen/qr_card_corner_radius"
+        app:cardElevation="@dimen/elevation_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvScanStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/spacing_xxl"
+            android:paddingVertical="@dimen/spacing_sm"
+            android:text="@string/status_mission_scan_target"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/text_size_body"
+            android:letterSpacing="0.1"
+            android:textStyle="bold"
+            android:gravity="center" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Controls -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/spacing_huge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_sm"
+            android:text="@string/hint_position_code"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/text_size_caption_alt" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabFlashlight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flashlight"
+            app:backgroundTint="@color/color_surface_variant"
+            app:fabSize="normal"
+            app:tint="@color/color_text_primary"
+            app:rippleColor="@color/color_ripple_light"
+            android:contentDescription="@string/cd_flashlight" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

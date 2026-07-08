@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_background">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/title_settings"
+            app:titleTextColor="@color/color_text_primary"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/color_text_primary"
+            app:navigationContentDescription="@string/cd_navigate_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+            <!-- Theme Setting -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_appearance"
+                android:textColor="@color/color_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/spacing_xs" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swDarkMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_dark_mode"
+                android:textColor="@color/color_text_primary"
+                android:checked="true"
+                android:layout_marginBottom="@dimen/spacing_xl" />
+
+            <!-- Alarm Defaults -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_alarm_defaults"
+                android:textColor="@color/color_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/spacing_xs" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDefaultRingtone"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_default_ringtone"
+                android:gravity="start|center_vertical"
+                android:layout_marginBottom="@dimen/spacing_md"
+                tools:text="Default Ringtone: Oxygen" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/swVibration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_vibration"
+                android:textColor="@color/color_text_primary"
+                android:checked="true"
+                android:layout_marginBottom="@dimen/spacing_md" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_default_challenge"
+                android:textColor="@color/color_text_primary"
+                android:layout_marginBottom="@dimen/spacing_xs" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_md"
+                app:hintTextColor="@color/color_text_primary"
+                android:textColorHint="@color/color_text_primary">
+
+                <AutoCompleteTextView
+                    android:id="@+id/actvChallengeType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/color_text_primary"
+                    android:text="@string/mission_math" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_snooze_duration"
+                android:textColor="@color/color_text_primary"
+                android:layout_marginBottom="@dimen/spacing_xs" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderSnooze"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="1"
+                android:valueTo="30"
+                android:stepSize="1"
+                android:value="5" />
+
+            <TextView
+                android:id="@+id/tvSnoozeValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_snooze_minutes"
+                android:textColor="@color/color_text_secondary"
+                android:layout_gravity="end"
+                tools:text="5 minutes" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
